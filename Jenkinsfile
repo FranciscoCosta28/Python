@@ -17,6 +17,10 @@ pipeline {
                 }
             }
         }
-        
+        stage('Test function somar') {
+            steps {
+                sh 'python3 test_helloworld.py'
+            }
+        }
     }
 }
