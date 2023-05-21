@@ -4,13 +4,13 @@ pipeline {
     stage('Build') {
       steps{
         script {
-                    def pythonInstalled = sh(script: 'python -c "import sys; sys.exit(0)"', returnStatus: true)
-                    if (pythonInstalled == 0) {
-                        echo 'Python is installed'
+          def pythonTool = tool name: 'Python', type: 'hudson.plugins.python.PythonInstallation'
+                    if (pythonTool == null) {
+                        error 'Python is not installed'
                     } else {
-                        echo 'Python is not installed'
+                        echo 'Python is installed'
                     }
-                }
+        }
       }
     }
     stage('Test') {
