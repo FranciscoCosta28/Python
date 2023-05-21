@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('Build') {
       steps{
-        echo('Building...')
+        script {
+            def pythonInstalled = sh(script: 'python --version', returnStatus: true)
+            if (pythonInstalled == 0) {
+                echo 'Python is installed'
+            } else {
+                echo 'Python is not installed'
+            }
+        }
       }
     }
     stage('Test') {
