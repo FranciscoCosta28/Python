@@ -3,8 +3,8 @@ from helloworld import somar
 def verificar_soma():
     resultado = somar(2, 3)
     if resultado == 5:
-        print("A soma é igual a 5.")
+        print("Ok")
     else:
-        print("A soma não é igual a 5.")
+        print("Not ok")
 
 verificar_soma()
