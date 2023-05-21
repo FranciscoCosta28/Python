@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test function somar') {
             steps {
-                sh 'python3 test_helloworld.py'
+                sh 'python3 check_soma.py'
             }
         }
     }
