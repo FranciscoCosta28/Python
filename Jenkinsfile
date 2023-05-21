@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Run the shell command to check if Python is installed
-                    def pythonInstalled = sh(returnStatus: true, script: 'python --version >/dev/null 2>&1')
+                    def pythonInstalled = sh(returnStatus: true, script: 'python3 --version >/dev/null 2>&1')
                     if (pythonInstalled == 0) {
                         // Python is installed
                         echo 'Python is installed on the machine.'
