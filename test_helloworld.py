@@ -1,6 +1,10 @@
-import helloworld
+from helloworld import somar
 
-    if helloworld.somar(2,3) == 5 :
-        print("ok")
+def verificar_soma():
+    resultado = somar(2, 3)
+    if resultado == 5:
+        print("A soma é igual a 5.")
     else:
-        print("not ok")
+        print("A soma não é igual a 5.")
+
+verificar_soma()
